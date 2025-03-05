@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<div class="container">
+  <!-- Título -->
+  <h1>Login</h1>
+
+  <!-- Formulario -->
+  <form method="post">
+    <div class="input-group">
+      <label for="user">Usuario:</label>
+      <input type="text" name="user" id="user" required>
+    </div>
+    <div class="input-group">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <button type="submit">Entrar</button>
+  </form>
+</div>
+
+</body>
+</html>

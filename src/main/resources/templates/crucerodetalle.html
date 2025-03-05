@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles del Crucero</title>
+    <link rel="stylesheet" th:href="@{/styledetalle.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 th:text="${crucero.nombre}"></h1>
+
+
+    <div class="crucero-info">
+        <p><strong>Naviera:</strong> <span th:text="${crucero.naviera}"></span></p>
+        <p><strong>Año de Construcción:</strong> <span th:text="${crucero.año_construccion}"></span></p>
+        <p><strong>Capacidad Pasajeros:</strong> <span th:text="${crucero.capacidad_pasajeros}"></span></p>
+        <p><strong>Capacidad Tripulación:</strong> <span th:text="${crucero.capacidad_tripulacion}"></span></p>
+        <p><strong>Número de Cubiertas:</strong> <span th:text="${crucero.cubiertas}"></span></p>
+        <p><strong>Longitud:</strong> <span th:text="${crucero.longitud}"></span> metros</p>
+        <p><strong>Peso:</strong> <span th:text="${crucero.peso}"></span> toneladas</p>
+        <p class="puntuacion"><strong>Puntuación:</strong> <span th:text="${crucero.puntuacion}"></span></p>
+        <p><strong>Número de Reseñas:</strong> <span th:text="${crucero.num_reviews}"></span></p>
+    </div>
+
+
+    <h2>Rutas</h2>
+    <ul class="rutas">
+        <li th:each="ruta : ${crucero.rutas}">
+            <p><strong>Puerto de Salida:</strong> <span th:text="${ruta.puerto_salida}"></span></p>
+            <p><strong>Puerto de Llegada:</strong> <span th:text="${ruta.puerto_llegada}"></span></p>
+            <p><strong>Destinos:</strong> <span th:text="${ruta.destinos}"></span></p>
+            <p><strong>Fecha de Salida:</strong> <span th:text="${ruta.fecha_salida}"></span></p>
+            <p><strong>Fecha de Llegada:</strong> <span th:text="${ruta.fecha_llegada}"></span></p>
+            <p><strong>Precio Base:</strong> <span th:text="${ruta.precio_base}"></span> €</p>
+        </li>
+    </ul>
+
+
+    <a href="/web/cruceros/puntuacion" class="back-btn">Volver</a>
+</div>
+
+</body>
+</html>

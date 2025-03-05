@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 public class Cruceros {
     @Id
-    private String _id;
+    private String id;
     private String nombre;
     private String naviera; // Ahora es un String en lugar de un ObjectId
     private Integer año_construccion;

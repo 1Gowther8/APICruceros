@@ -1,0 +1,133 @@
+/* ======== Estilos Generales ======== */
+body {
+    background: linear-gradient(135deg, #004e92, #00b4d8);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* ======== Contenedor Principal ======== */
+.container {
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    color: #00334e;
+}
+
+/* ======== Títulos ======== */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #005f99;
+}
+
+/* ======== Información del Crucero ======== */
+.crucero-info {
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.crucero-info p {
+    background: #f0f8ff;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    font-weight: bold;
+    border-left: 5px solid #0077b6;
+}
+
+/* ======== Puntuación ======== */
+.puntuacion {
+    font-size: 1.3em;
+    color: #ffdd57;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.puntuacion::after {
+    content: "⭐";
+    font-size: 1.5em;
+    color: #ffdd57;
+}
+
+/* ======== Rutas ======== */
+.rutas {
+    list-style: none;
+    padding: 0;
+}
+
+.rutas li {
+    background: linear-gradient(135deg, #f0f8ff, #e0f7fa);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.rutas p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* ======== Botón de Regreso ======== */
+.back-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 18px;
+    background: #ffdd57;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+    background: #f4c430;
+}
+
+/* ======== Diseño Responsivo ======== */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .crucero-info {
+        font-size: 1em;
+    }
+
+    .back-btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+}
